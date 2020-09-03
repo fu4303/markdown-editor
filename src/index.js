@@ -1,10 +1,17 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import App from "./App"
+import { Router } from "@reach/router"
+import Home from "./pages/Home"
+import Create from "./pages/Create"
+import NotFound from "./pages/NotFound"
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Home path="/" />
+      <Create path="/create" />
+      <NotFound path="*" />
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 )
