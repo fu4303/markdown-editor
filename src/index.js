@@ -4,6 +4,7 @@ import { createOvermind } from "overmind"
 import { Provider } from "overmind-react"
 import { Global } from "@emotion/core"
 import { config } from "./hooks/useOvermind"
+import Inject from "./components/Inject"
 import GlobalStyles from "./styles/globalStyles"
 import Routes from "./components/Routes"
 
@@ -11,6 +12,7 @@ const overmind = createOvermind(config)
 
 ReactDOM.render(
   <React.StrictMode>
+    <Inject />
     <Provider value={overmind}>
       <Global styles={GlobalStyles} />
       <Routes />
