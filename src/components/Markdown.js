@@ -1,17 +1,23 @@
-import React, { useState } from "react"
+import React from "react"
 import ReactMarkdown from "react-markdown"
+import { useOvermind } from "../hooks/useOvermind"
 
 const Markdown = () => {
-  const [markdown, setMarkdown] = useState("# Hello, Markdown!")
-
-  function handleChange(e) {
-    setMarkdown(e.target.value)
-  }
+  const {
+    state,
+    actions: { resetMarkdown, updateMarkdown, saveMarkdown },
+  } = useOvermind()
 
   return (
     <>
-      <textarea onChange={handleChange} value={markdown} />
-      <ReactMarkdown source={markdown} />
+      <textarea onChange={(e) => updateMarkdown(e)} value={state.markdown} />
+      <ReactMarkdown source={state.markdown} />
+      <button type="button" onClick={() => resetMarkdown()}>
+        Test Reset
+      </button>
+      <button type="button" onClick={() => saveMarkdown()}>
+        Test Save
+      </button>
     </>
   )
 }
