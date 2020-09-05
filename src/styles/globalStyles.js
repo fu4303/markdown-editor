@@ -19,6 +19,7 @@ const GlobalStyles = css`
   }
   html {
     font-size: 16px;
+    text-size-adjust: 100%;
   }
   body {
     font-family: "Roboto", sans-serif;
@@ -26,7 +27,7 @@ const GlobalStyles = css`
     font-weight: 300;
     line-height: var(--lg);
     color: var(--dark);
-    background-color: white;
+    background-color: var(--light);
   }
   h1 {
     font-size: var(--lg);

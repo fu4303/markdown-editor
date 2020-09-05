@@ -1,22 +1,28 @@
 import styled from "@emotion/styled"
 
 export const NavWrapper = styled.nav`
-  height: calc(var(--lg) * 2);
+  background-color: var(--primary);
+`
+
+export const NavContent = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 var(--sm);
-  background-color: var(--primary);
+  height: calc(var(--xl) * 2);
+  max-width: 1440px;
+  width: calc(100% - (var(--xl) * 2));
+  margin: 0 auto;
 `
 
 export const NavLogo = styled.h1`
   font-size: var(--md);
-  span {
-    font-weight: 300;
-  }
   a {
-    color: var(--light);
+    color: white;
     text-decoration: none;
+    span {
+      color: var(--light);
+      font-weight: 300;
+    }
   }
 `
 
@@ -31,7 +37,7 @@ export const NavMenuItem = styled.li`
     margin-right: var(--sm);
   }
   a {
-    color: var(--light);
+    color: white;
     text-decoration: none;
     padding-bottom: 2px;
     position: relative;
