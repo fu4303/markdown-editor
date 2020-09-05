@@ -1,6 +1,12 @@
 import React from "react"
-import ReactMarkdown from "react-markdown"
-import { useOvermind } from "../../hooks/useState"
+import { useOvermind } from "../../hooks/useOvermind"
+import {
+  MarkdownWrapper,
+  MarkdownEditor,
+  MarkdownPreview,
+  MarkdownOptions,
+  MarkdownOption,
+} from "./styles"
 
 const Markdown = () => {
   const {
@@ -9,16 +15,21 @@ const Markdown = () => {
   } = useOvermind()
 
   return (
-    <>
-      <textarea onChange={(e) => updateMarkdown(e)} value={state.markdown} />
-      <ReactMarkdown source={state.markdown} />
-      <button type="button" onClick={() => resetMarkdown()}>
-        Test Reset
-      </button>
-      <button type="button" onClick={() => saveMarkdown()}>
-        Test Save
-      </button>
-    </>
+    <MarkdownWrapper>
+      <MarkdownEditor
+        onChange={(e) => updateMarkdown(e)}
+        value={state.markdown}
+      />
+      <MarkdownPreview source={state.markdown} />
+      <MarkdownOptions>
+        <MarkdownOption onClick={() => resetMarkdown()}>
+          <span>Reset Editor</span>
+        </MarkdownOption>
+        <MarkdownOption onClick={() => saveMarkdown()}>
+          <span>Download File</span>
+        </MarkdownOption>
+      </MarkdownOptions>
+    </MarkdownWrapper>
   )
 }
 

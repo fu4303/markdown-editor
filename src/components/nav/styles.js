@@ -49,7 +49,7 @@ export const NavMenuItem = styled.li`
       left: 0;
       bottom: 0;
       opacity: 0;
-      transform: translateY(4px);
+      transform: translateY(0.25rem);
       background-color: var(--light);
       transition: opacity 0.15s ease, transform 0.15s ease;
     }
