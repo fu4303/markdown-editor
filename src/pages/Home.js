@@ -1,6 +1,6 @@
 import React from "react"
-import Nav from "../components/Nav"
-import Markdown from "../components/Markdown"
+import Nav from "../components/nav"
+import Markdown from "../components/markdown"
 
 const Home = () => (
   <>

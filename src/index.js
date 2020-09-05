@@ -3,10 +3,10 @@ import ReactDOM from "react-dom"
 import { createOvermind } from "overmind"
 import { Provider } from "overmind-react"
 import { Global } from "@emotion/core"
-import { config } from "./hooks/useOvermind"
-import Inject from "./components/Inject"
+import { config } from "./hooks/useState"
+import Inject from "./components/inject"
 import GlobalStyles from "./styles/globalStyles"
-import Routes from "./components/Routes"
+import Routes from "./components/routes"
 
 const overmind = createOvermind(config)
 

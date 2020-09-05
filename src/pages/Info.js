@@ -1,6 +1,6 @@
 import React from "react"
-import Nav from "../components/Nav"
-import Page from "../components/Page"
+import Nav from "../components/nav"
+import Page from "../components/page"
 
 const Info = () => (
   <>
