@@ -34,7 +34,7 @@ const GlobalStyles = css`
     font-size: var(--xl);
     font-weight: 500;
     line-height: var(--xl);
-    margin: 0;
+    margin: 0 0 var(--lg);
   }
   h2 {
     font-size: var(--lg);

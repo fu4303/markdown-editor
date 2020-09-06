@@ -21,6 +21,7 @@ export const NavContent = styled.nav`
 
 export const NavLogo = styled.h1`
   font-size: var(--md);
+  margin: 0;
   a {
     color: white;
     text-decoration: none;
