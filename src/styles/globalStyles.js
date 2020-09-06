@@ -4,7 +4,6 @@ import { css } from "@emotion/core"
 const GlobalStyles = css`
   :root {
     --primary: #5316c1;
-    --accent: #dd4b08;
     --dark: #3c3c3c;
     --mid: #cfcfcf;
     --light: #f0f0f0;
@@ -14,6 +13,7 @@ const GlobalStyles = css`
     --md: 1.333rem;
     --sm: 1rem;
     --xs: 0.75rem;
+    --xxs: 0.25rem;
   }
   * {
     box-sizing: border-box;
@@ -31,7 +31,7 @@ const GlobalStyles = css`
     background-color: var(--light);
   }
   h1 {
-    font-size: var(--lg);
+    font-size: var(--xl);
     font-weight: 500;
     line-height: var(--xl);
     margin: 0;

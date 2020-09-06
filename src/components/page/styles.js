@@ -7,7 +7,7 @@ export const PageContent = styled.main`
   margin: var(--xl) auto;
   padding: var(--xl) var(--xl) var(--xs);
   background-color: white;
-  border-radius: 0.25rem;
+  border-radius: var(--xxs);
   box-shadow: var(--shadow);
   border: 1px solid var(--mid);
   h2 {
