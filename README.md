@@ -9,22 +9,23 @@ Markdown Forge is bootstrapped with [Create React App](https://github.com/facebo
 
 
 ## Getting Started
-Download or clone the project files locally and navigate to the project directory. 
+1. Download or clone the project files locally and navigate to the project directory. 
 ``` 
 cd markdown-forge
 ```
 
-Install the project dependencies. 
+2. Install the project dependencies. 
 ```
 yarn
 ```
 
-Then start the site. Once compiled, you should see and be able to access your site locally at localhost:3000
+
+3. Then start the site. Once compiled, you should see and be able to access your site locally at localhost:3000
 ```
 yarn start
 ```
 
-If you are using a [VSCode](https://code.visualstudio.com/) or another modern ide with ESLint enabled, your files should lint automatically after each save. If not, you can run the following command to lint your changes. 
+4. If you are using a [VSCode](https://code.visualstudio.com/) or another modern ide with ESLint enabled, your files should lint automatically after each save. If not, you can run the following command to lint your changes. 
 
 ```
 yarn lint
