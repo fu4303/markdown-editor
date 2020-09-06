@@ -1,13 +1,13 @@
 import React from "react"
 import { Router } from "@reach/router"
 import Home from "../../pages/Home"
-import Info from "../../pages/Info"
+import About from "../../pages/About"
 import Lost from "../../pages/Lost"
 
 const Routes = () => (
   <Router>
     <Home path="/" />
-    <Info path="/info" />
+    <About path="/about" />
     <Lost path="*" />
   </Router>
 )

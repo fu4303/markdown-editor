@@ -12,6 +12,11 @@ export const NavContent = styled.nav`
   max-width: 1440px;
   width: calc(100% - (var(--xl) * 2));
   margin: 0 auto;
+  @media (max-width: 480px) {
+    flex-flow: column;
+    height: auto;
+    padding: var(--md) 0;
+  }
 `
 
 export const NavLogo = styled.h1`
@@ -29,10 +34,13 @@ export const NavLogo = styled.h1`
 export const NavMenu = styled.ul`
   display: flex;
   margin: 0;
+  @media (max-width: 480px) {
+    margin-top: var(--xxs);
+  }
 `
 
 export const NavMenuItem = styled.li`
-  font-size: var(--sm);
+  font-size: var(--xs);
   :not(:last-of-type) {
     margin-right: var(--sm);
   }

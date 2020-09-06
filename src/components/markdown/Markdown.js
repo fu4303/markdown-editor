@@ -1,17 +1,11 @@
 import React from "react"
 import { useOvermind } from "../../hooks/useOvermind"
-import {
-  MarkdownWrapper,
-  MarkdownEditor,
-  MarkdownPreview,
-  MarkdownOptions,
-  MarkdownOption,
-} from "./styles"
+import { MarkdownWrapper, MarkdownEditor, MarkdownPreview } from "./styles"
 
 const Markdown = () => {
   const {
     state,
-    actions: { resetMarkdown, updateMarkdown, saveMarkdown },
+    actions: { updateMarkdown },
   } = useOvermind()
 
   return (
@@ -21,14 +15,6 @@ const Markdown = () => {
         value={state.markdown}
       />
       <MarkdownPreview source={state.markdown} />
-      <MarkdownOptions>
-        <MarkdownOption onClick={() => resetMarkdown()}>
-          <span>Reset Editor</span>
-        </MarkdownOption>
-        <MarkdownOption onClick={() => saveMarkdown()}>
-          <span>Download File</span>
-        </MarkdownOption>
-      </MarkdownOptions>
     </MarkdownWrapper>
   )
 }

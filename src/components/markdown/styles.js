@@ -13,12 +13,14 @@ export const MarkdownWrapper = styled.main`
   min-height: 560px;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    height: 100%;
   }
 `
 
 export const MarkdownEditor = styled.textarea`
   align-self: start;
   height: 100%;
+  min-height: 560px;
   background: transparent;
   border: 1px solid var(--mid);
   padding: var(--xl) var(--xl) var(--xs);
@@ -37,6 +39,7 @@ export const MarkdownEditor = styled.textarea`
 export const MarkdownPreview = styled(ReactMarkdown)`
   align-self: start;
   height: 100%;
+  min-height: 560px;
   padding: var(--xl) var(--xl) var(--xs);
   background-color: white;
   border-radius: var(--xxs);
@@ -136,36 +139,5 @@ export const MarkdownPreview = styled(ReactMarkdown)`
       border: none;
       background: transparent;
     }
-  }
-`
-
-export const MarkdownOptions = styled.ul`
-  position: absolute;
-  bottom: var(--md);
-  right: var(--md);
-  display: flex;
-  margin: 0;
-`
-
-export const MarkdownOption = styled.li`
-  padding: var(--xxs) var(--md);
-  background-color: var(--primary);
-  font-size: var(--xs);
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--light);
-  border-radius: var(--xxs);
-  transition: transform 0.2s ease-in-out;
-  :not(:last-of-type) {
-    margin-right: var(--sm);
-  }
-  :hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    background-color: var(--primary);
-    color: var(--light);
-  }
-  :active {
-    transform: scale(0.95);
   }
 `
