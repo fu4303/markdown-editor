@@ -6,10 +6,11 @@ import Page from "../components/page"
 const Lost = () => (
   <>
     <Nav />
-    <Page>
-      <h2>404 - Page Not Found</h2>
+    <Page title="Page Not Found">
       <p>The page you are looking does not exist or has been removed.</p>
-      <Link to="/">Return to Markdown Forge</Link>
+      <p>
+        <Link to="/">Return to Editor?</Link>
+      </p>
     </Page>
   </>
 )

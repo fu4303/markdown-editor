@@ -12,5 +12,16 @@ export const PageContent = styled.main`
   border: 1px solid var(--mid);
   h2 {
     margin-top: 0;
+    color: var(--primary);
+  }
+  ul {
+    margin-top: var(--md);
+  }
+  a {
+    color: var(--primary);
+    transition: color 0.2s ease-in-out;
+    :hover {
+      color: var(--dark);
+    }
   }
 `

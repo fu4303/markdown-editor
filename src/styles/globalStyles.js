@@ -45,7 +45,7 @@ const GlobalStyles = css`
   h3 {
     font-size: var(--md);
     font-weight: 500;
-    margin: var(--lg) 0 0;
+    margin: var(--lg) 0;
   }
   h4 {
     font-size: var(--sm);
@@ -74,7 +74,7 @@ const GlobalStyles = css`
   }
   hr {
     border: 1px solid var(--mid);
-    margin: -1px 0;
+    margin: -1px 0 var(--lg);
   }
   a,
   b,

@@ -14,7 +14,7 @@ const Nav = () => {
       <NavContent>
         <NavLogo>
           <Link to="/">
-            <span>Markdown</span>Forge
+            <span>Markdown</span> Forge
           </Link>
         </NavLogo>
         <NavMenu>
