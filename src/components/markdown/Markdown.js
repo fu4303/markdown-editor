@@ -16,7 +16,7 @@ const Markdown = () => {
           onChange={(e) => updateMarkdown(e)}
           value={state.markdown}
         />
-        <MarkdownPreview source={state.markdown} />
+        <MarkdownPreview source={state.markdown} linkTarget="_blank" />
       </MarkdownWrapper>
     </Fade>
   )
