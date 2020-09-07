@@ -4,7 +4,7 @@ export const NavWrapper = styled.nav`
   background-color: var(--primary);
 `
 
-export const NavContent = styled.nav`
+export const NavContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
