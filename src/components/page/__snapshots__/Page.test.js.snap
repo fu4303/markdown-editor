@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> matches snapshot with data passed correctly 1`] = `
+<Fade
+  delay={250}
+  duration={1500}
+>
+  <Styled(main)>
+    <h2>
+      page prop title
+    </h2>
+    <hr />
+    <p>
+      Page children content
+    </p>
+  </Styled(main)>
+</Fade>
+`;

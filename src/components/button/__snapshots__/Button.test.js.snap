@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> matches snapshot with data passed correctly 1`] = `
+<Styled(button)
+  onClick={[MockFunction]}
+>
+  button prop text
+</Styled(button)>
+`;

@@ -12,8 +12,8 @@ const overmind = createOvermind(config)
 
 ReactDOM.render(
   <React.StrictMode>
-    <Inject />
     <Provider value={overmind}>
+      <Inject />
       <Global styles={GlobalStyles} />
       <Routes />
     </Provider>
