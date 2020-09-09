@@ -14,4 +14,13 @@ describe("<Button />", () => {
     )
     expect(toJson(wrapper)).toMatchSnapshot()
   })
+
+  it("on button click calls action function", () => {
+    const actionMock = jest.fn()
+    const wrapper = shallow(
+      <Button text="button prop text" action={actionMock} />
+    )
+    wrapper.simulate("click")
+    expect(actionMock).toHaveBeenCalled()
+  })
 })

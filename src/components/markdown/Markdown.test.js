@@ -4,15 +4,15 @@ import toJson from "enzyme-to-json"
 import { createOvermindMock } from "overmind"
 import { Provider } from "overmind-react"
 import { config } from "../../hooks/useOvermind"
-import Nav from "./Nav"
+import Markdown from "./Markdown"
 
 const mockedOvermind = createOvermindMock(config)
 
-describe("<Nav />", () => {
+describe("<Markdown />", () => {
   it("renders without crashing", () => {
     shallow(
       <Provider value={mockedOvermind}>
-        <Nav />
+        <Markdown />
       </Provider>
     )
   })
@@ -20,7 +20,7 @@ describe("<Nav />", () => {
   it("matches snapshot with context passed correctly", () => {
     const wrapper = shallow(
       <Provider value={mockedOvermind}>
-        <Nav />
+        <Markdown />
       </Provider>
     )
     expect(toJson(wrapper)).toMatchSnapshot()
