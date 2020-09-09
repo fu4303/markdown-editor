@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "@reach/router"
+import PropTypes from "prop-types"
+import { Link, Match } from "@reach/router"
 import Slide from "react-reveal/Slide"
 import { useOvermind } from "../../hooks/useOvermind"
 import { NavWrapper, NavContent, NavLogo, NavMenu, NavMenuItem } from "./styles"
@@ -23,17 +24,42 @@ const Nav = () => {
             <NavMenuItem>
               <Link to="/about">About</Link>
             </NavMenuItem>
-            <NavMenuItem>
-              <Button type="button" action={resetMarkdown} text="Reset" />
-            </NavMenuItem>
-            <NavMenuItem>
-              <Button type="button" action={saveMarkdown} text="Download" />
-            </NavMenuItem>
+            <Match path="/">
+              {(props) =>
+                props.match && (
+                  <>
+                    <NavMenuItem>
+                      <Button
+                        type="button"
+                        action={resetMarkdown}
+                        text="Reset"
+                      />
+                    </NavMenuItem>
+                    <NavMenuItem>
+                      <Button
+                        type="button"
+                        action={saveMarkdown}
+                        text="Download"
+                      />
+                    </NavMenuItem>
+                  </>
+                )
+              }
+            </Match>
           </NavMenu>
         </NavContent>
       </NavWrapper>
     </Slide>
   )
+}
+
+Nav.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  match: PropTypes.object,
+}
+
+Nav.defaultProps = {
+  match: {},
 }
 
 export default Nav
